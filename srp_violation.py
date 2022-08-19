@@ -108,21 +108,23 @@ class Employee:
         self._name = name
         self._role = role
         self._address = address
+        self.hour_reporter = HourReporter()
+        self.saver = EmployeeSaver()
 
     def calculate_pay(self):
         pass
 
     def report_hours(self):
-        pass
+        self.hour_reporter.report_hours()
 
     def save(self):
-        pass
+        self.saver.save_employee()
 
 
 # noinspection PyRedeclaration
 class HourReporter:
-    def __init__(self, data):
-        self.employee_data = data
+    def __init__(self):
+        pass
 
     def report_hours(self):
         pass
@@ -133,8 +135,8 @@ class HourReporter:
 
 # noinspection PyRedeclaration
 class EmployeeSaver:
-    def __init__(self, data):
-        self.employee_data = data
+    def __init__(self):
+        pass
 
     def save_employee(self):
         pass
